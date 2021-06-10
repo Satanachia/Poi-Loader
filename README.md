@@ -2,7 +2,11 @@
 just a way to launch mabi using steam 
 
 on first launch it will ask you to create a profile
+
+
 ![Preview](createprofile.png)
+
+## first launch
 Profile name is the name you want to give said profile
 user name is the user name of the steam account that client uses
 password is the password of said account (THIS IS STORED IN CLEAR TEXT. DO NOT SHARE YOUR profile.csv FILE. IT IS NOT MY FAULT IF SOMEONE STEALS YOUR ACCOUNTS)
@@ -11,7 +15,11 @@ path to steam is for the path of steam.exe (not mabinogi) just click the select 
 once you have staved the profile it will take you to the main program, this will show from now on.
 saddly if you want to update the list of accounts you will need to reopen the program, this is (WIP)
 
+
+## main screen
 ![Preview](mainscreen.png)
+
+## how to
 at the top you select what profile you want to use as profile 1 (this comes into play later)
 middle of the screen just shows you the details of the selected profile. just to make sure they are correct
 if you tick the close steam after tick box it will close steam after the ammount of time in the box next to it. in this image that is 30 seconds
