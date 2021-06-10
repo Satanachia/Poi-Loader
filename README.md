@@ -7,10 +7,10 @@ on first launch it will ask you to create a profile
 ![Preview](createprofile.png)
 
 ## first launch
-Profile name is the name you want to give said profile
-user name is the user name of the steam account that client uses
-password is the password of said account (THIS IS STORED IN CLEAR TEXT. DO NOT SHARE YOUR profile.csv FILE. IT IS NOT MY FAULT IF SOMEONE STEALS YOUR ACCOUNTS)
-path to steam is for the path of steam.exe (not mabinogi) just click the select steam button and go to your steam install
+*Profile name is the name you want to give said profile
+*user name is the user name of the steam account that client uses
+*password is the password of said account (THIS IS STORED IN CLEAR TEXT. DO NOT SHARE YOUR profile.csv FILE. IT IS NOT MY FAULT IF SOMEONE STEALS YOUR ACCOUNTS)
+*path to steam is for the path of steam.exe (not mabinogi) just click the select steam button and go to your steam install
 
 once you have staved the profile it will take you to the main program, this will show from now on.
 saddly if you want to update the list of accounts you will need to reopen the program, this is (WIP)
@@ -20,14 +20,14 @@ saddly if you want to update the list of accounts you will need to reopen the pr
 ![Preview](mainscreen.png)
 
 ## how to
-at the top you select what profile you want to use as profile 1 (this comes into play later)
-middle of the screen just shows you the details of the selected profile. just to make sure they are correct
-if you tick the close steam after tick box it will close steam after the ammount of time in the box next to it. in this image that is 30 seconds
-this allows you to multiclient if you have a mod that allows multiclienting
-launch will launch the selected profile
-create profile allows you to create a new profile
-launch x clients with the number next to it will allow you to launch more then one client, it does this one after the other
-for launching multiable clients it will launch the selected profile then x number of profiles after that one.
+*at the top you select what profile you want to use as profile 1 (this comes into play later)
+*middle of the screen just shows you the details of the selected profile. just to make sure they are correct
+*if you tick the close steam after tick box it will close steam after the ammount of time in the box next to it. in this image that is 30 seconds
+*this allows you to multiclient if you have a mod that allows multiclienting
+*launch will launch the selected profile
+*create profile allows you to create a new profile
+*launch x clients with the number next to it will allow you to launch more then one client, it does this one after the other
+*for launching multiable clients it will launch the selected profile then x number of profiles after that one.
 say i selected profile aaa and in my list of profiles was bbb and ccc as shown here
 
 
