@@ -42,6 +42,9 @@ if you click kill all clients it will kill all clients.
 if you put the PID of your main client into the text box next to kill all clients. then click the kill all clients it will kill all clients but the main.
 if you want to use this look up how to find the PID of a process. 
 
+## Credits
+* that guy who showed me you can launch mabi via steam with command line
+
 ## copyright stuff (i dont even know if this is legit)
 
 MIT License
