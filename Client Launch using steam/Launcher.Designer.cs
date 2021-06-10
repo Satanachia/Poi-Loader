@@ -1,7 +1,7 @@
 ﻿
 namespace Client_Launch_using_steam
 {
-    partial class Form1
+    partial class Launcher
     {
         /// <summary>
         /// Required designer variable.

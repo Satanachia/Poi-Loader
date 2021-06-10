@@ -15,9 +15,9 @@ using System.Management;
 
 namespace Client_Launch_using_steam
 {
-    public partial class Form1 : Form
+    public partial class Launcher : Form
     {
-        public Form1()
+        public Launcher()
         {
             InitializeComponent();
         }
