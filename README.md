@@ -29,7 +29,10 @@ create profile allows you to create a new profile
 launch x clients with the number next to it will allow you to launch more then one client, it does this one after the other
 for launching multiable clients it will launch the selected profile then x number of profiles after that one.
 say i selected profile aaa and in my list of profiles was bbb and ccc as shown here
+
+
 ![Preview](more.png)
+
 if i select 2 and then click launch x clients it will launch the selected profile (aaa) and then the profile after (bbb) 
 if i select 3 it will launch both aaa and the 2 cleints after it (bbb) and (ccc)
 you can only launch upto 7 cleints at a time (this is because i assume you are runnning 1 main and 7 alts for dungeons or something)
