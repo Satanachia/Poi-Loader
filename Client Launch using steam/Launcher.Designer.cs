@@ -48,6 +48,7 @@ namespace Client_Launch_using_steam
             this.bkill = new System.Windows.Forms.Button();
             this.tpid = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ntimetoclose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nofclient)).BeginInit();
@@ -222,26 +223,35 @@ namespace Client_Launch_using_steam
             // 
             // tpid
             // 
-            this.tpid.Location = new System.Drawing.Point(187, 213);
+            this.tpid.Location = new System.Drawing.Point(223, 212);
             this.tpid.Name = "tpid";
-            this.tpid.Size = new System.Drawing.Size(100, 20);
+            this.tpid.Size = new System.Drawing.Size(124, 20);
             this.tpid.TabIndex = 17;
-            this.tpid.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(94, 215);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.Size = new System.Drawing.Size(123, 13);
             this.label6.TabIndex = 18;
-            this.label6.Text = "PID of main client";
+            this.label6.Text = "Char name of main client";
             // 
-            // Form1
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 240);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(226, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "You need to rename your cleint for this to work";
+            // 
+            // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 245);
+            this.ClientSize = new System.Drawing.Size(359, 276);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tpid);
             this.Controls.Add(this.bkill);
@@ -252,7 +262,7 @@ namespace Client_Launch_using_steam
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.blaunch);
             this.Controls.Add(this.button2);
-            this.Name = "Form1";
+            this.Name = "Launcher";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -284,6 +294,7 @@ namespace Client_Launch_using_steam
         private System.Windows.Forms.Button bkill;
         private System.Windows.Forms.TextBox tpid;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

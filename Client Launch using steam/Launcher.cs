@@ -52,6 +52,8 @@ namespace Client_Launch_using_steam
                 test.StartInfo.FileName = path;
                 test.StartInfo.Arguments = @"-login " + user + @" " + pass + @" -applaunch 212200";
                 test.Start();
+                //todo get a list of pids of current running mabis
+                //when new pid gets added then close steam to remove need for wait
                 if(closesteam)
                 {
                     Thread.Sleep(Decimal.ToInt32(ntimetoclose.Value) * 1000);
@@ -70,6 +72,28 @@ namespace Client_Launch_using_steam
                     try
                     {
                         foreach (Process proc in Process.GetProcessesByName("etracer"))
+                        {
+                            proc.Kill();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        foreach (Process proc in Process.GetProcessesByName("steamwebhelper"))
+                        {
+                            proc.Kill();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        foreach (Process proc in Process.GetProcessesByName("nxsteam"))
                         {
                             proc.Kill();
                         }
@@ -160,13 +184,14 @@ namespace Client_Launch_using_steam
 
         private void bkill_Click(object sender, EventArgs e)
         {
-            int pid;
+            
             try
             {
                 foreach (Process proc in Process.GetProcessesByName("Client"))
                 {
-                    pid = proc.Id;
-                    if (pid != Int32.Parse(tpid.Text))
+                    string clientname = proc.MainWindowTitle.ToLower();
+                    
+                    if (!clientname.Contains(tpid.Text.ToLower()))
                         {
                         proc.Kill();
                         }
@@ -179,15 +204,7 @@ namespace Client_Launch_using_steam
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

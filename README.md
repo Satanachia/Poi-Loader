@@ -39,8 +39,8 @@ if i select 3 it will launch both aaa and the 2 cleints after it (bbb) and (ccc)
 you can only launch upto 7 cleints at a time (this is because i assume you are runnning 1 main and 7 alts for dungeons or something)
 
 if you click kill all clients it will kill all clients.
-if you put the PID of your main client into the text box next to kill all clients. then click the kill all clients it will kill all clients but the main.
-if you want to use this look up how to find the PID of a process. 
+if you put the name of the main cleint into the text box next to kill all clients your main client will not be closed. 
+for this to work you need some kind of way of renaming clients. see tin or some other program
 
 ## Credits
 * that guy who showed me you can launch mabi via steam with command line
