@@ -57,57 +57,61 @@ namespace Client_Launch_using_steam
                 if(closesteam)
                 {
                     Thread.Sleep(Decimal.ToInt32(ntimetoclose.Value) * 1000);
-                    try
-                    {
-                        foreach (Process proc in Process.GetProcessesByName("steam"))
-                        {
-                            proc.Kill();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-
-                    }
-                    try
-                    {
-                        foreach (Process proc in Process.GetProcessesByName("etracer"))
-                        {
-                            proc.Kill();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    try
-                    {
-                        foreach (Process proc in Process.GetProcessesByName("steamwebhelper"))
-                        {
-                            proc.Kill();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    try
-                    {
-                        foreach (Process proc in Process.GetProcessesByName("nxsteam"))
-                        {
-                            proc.Kill();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                    killsteam();
                 }
             }
 
             }
             
+        void killsteam()
+        {
+            
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("steam"))
+                {
+                    proc.Kill();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
 
+            }
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("etracer"))
+                {
+                    proc.Kill();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("steamwebhelper"))
+                {
+                    proc.Kill();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("nxsteam"))
+                {
+                    proc.Kill();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             bool fileexist = File.Exists(@"profile.csv");
@@ -204,7 +208,10 @@ namespace Client_Launch_using_steam
             }
         }
 
-
+        private void bkillsteam_Click(object sender, EventArgs e)
+        {
+            killsteam();
+        }
     }
 }
 

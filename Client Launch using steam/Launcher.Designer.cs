@@ -29,6 +29,7 @@ namespace Client_Launch_using_steam
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Launcher));
             this.button2 = new System.Windows.Forms.Button();
             this.blaunch = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -49,6 +50,7 @@ namespace Client_Launch_using_steam
             this.tpid = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.bkillsteam = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ntimetoclose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nofclient)).BeginInit();
@@ -246,11 +248,23 @@ namespace Client_Launch_using_steam
             this.label7.TabIndex = 19;
             this.label7.Text = "You need to rename your cleint for this to work";
             // 
+            // bkillsteam
+            // 
+            this.bkillsteam.Location = new System.Drawing.Point(215, 12);
+            this.bkillsteam.Name = "bkillsteam";
+            this.bkillsteam.Size = new System.Drawing.Size(75, 23);
+            this.bkillsteam.TabIndex = 20;
+            this.bkillsteam.Text = "Kill Steam";
+            this.bkillsteam.UseVisualStyleBackColor = true;
+            this.bkillsteam.Click += new System.EventHandler(this.bkillsteam_Click);
+            // 
             // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 276);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(359, 298);
+            this.Controls.Add(this.bkillsteam);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tpid);
@@ -262,8 +276,12 @@ namespace Client_Launch_using_steam
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.blaunch);
             this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Launcher";
-            this.Text = "Form1";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Launcher";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -295,6 +313,7 @@ namespace Client_Launch_using_steam
         private System.Windows.Forms.TextBox tpid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bkillsteam;
     }
 }
 
