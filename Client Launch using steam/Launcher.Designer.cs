@@ -51,6 +51,7 @@ namespace Client_Launch_using_steam
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.bkillsteam = new System.Windows.Forms.Button();
+            this.Steamnoclient = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ntimetoclose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nofclient)).BeginInit();
@@ -58,7 +59,7 @@ namespace Client_Launch_using_steam
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(94, 186);
+            this.button2.Location = new System.Drawing.Point(94, 214);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 23);
             this.button2.TabIndex = 1;
@@ -68,7 +69,7 @@ namespace Client_Launch_using_steam
             // 
             // blaunch
             // 
-            this.blaunch.Location = new System.Drawing.Point(13, 186);
+            this.blaunch.Location = new System.Drawing.Point(13, 214);
             this.blaunch.Name = "blaunch";
             this.blaunch.Size = new System.Drawing.Size(75, 23);
             this.blaunch.TabIndex = 6;
@@ -79,9 +80,9 @@ namespace Client_Launch_using_steam
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 13);
+            this.comboBox1.Location = new System.Drawing.Point(13, 28);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(113, 21);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -117,7 +118,7 @@ namespace Client_Launch_using_steam
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Location = new System.Drawing.Point(13, 40);
+            this.groupBox1.Location = new System.Drawing.Point(13, 68);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(295, 128);
             this.groupBox1.TabIndex = 11;
@@ -185,15 +186,15 @@ namespace Client_Launch_using_steam
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(141, 20);
+            this.label4.Location = new System.Drawing.Point(10, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Select profile";
+            this.label4.Text = "Select steam profile";
             // 
             // launchxclients
             // 
-            this.launchxclients.Location = new System.Drawing.Point(187, 186);
+            this.launchxclients.Location = new System.Drawing.Point(187, 214);
             this.launchxclients.Name = "launchxclients";
             this.launchxclients.Size = new System.Drawing.Size(121, 23);
             this.launchxclients.TabIndex = 13;
@@ -203,7 +204,7 @@ namespace Client_Launch_using_steam
             // 
             // nofclient
             // 
-            this.nofclient.Location = new System.Drawing.Point(314, 186);
+            this.nofclient.Location = new System.Drawing.Point(314, 214);
             this.nofclient.Maximum = new decimal(new int[] {
             7,
             0,
@@ -215,7 +216,7 @@ namespace Client_Launch_using_steam
             // 
             // bkill
             // 
-            this.bkill.Location = new System.Drawing.Point(13, 210);
+            this.bkill.Location = new System.Drawing.Point(13, 238);
             this.bkill.Name = "bkill";
             this.bkill.Size = new System.Drawing.Size(75, 23);
             this.bkill.TabIndex = 15;
@@ -225,7 +226,7 @@ namespace Client_Launch_using_steam
             // 
             // tpid
             // 
-            this.tpid.Location = new System.Drawing.Point(223, 212);
+            this.tpid.Location = new System.Drawing.Point(223, 240);
             this.tpid.Name = "tpid";
             this.tpid.Size = new System.Drawing.Size(124, 20);
             this.tpid.TabIndex = 17;
@@ -233,7 +234,7 @@ namespace Client_Launch_using_steam
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(94, 215);
+            this.label6.Location = new System.Drawing.Point(94, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 13);
             this.label6.TabIndex = 18;
@@ -242,7 +243,7 @@ namespace Client_Launch_using_steam
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 240);
+            this.label7.Location = new System.Drawing.Point(13, 268);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(226, 13);
             this.label7.TabIndex = 19;
@@ -250,7 +251,7 @@ namespace Client_Launch_using_steam
             // 
             // bkillsteam
             // 
-            this.bkillsteam.Location = new System.Drawing.Point(215, 12);
+            this.bkillsteam.Location = new System.Drawing.Point(214, 26);
             this.bkillsteam.Name = "bkillsteam";
             this.bkillsteam.Size = new System.Drawing.Size(75, 23);
             this.bkillsteam.TabIndex = 20;
@@ -258,12 +259,23 @@ namespace Client_Launch_using_steam
             this.bkillsteam.UseVisualStyleBackColor = true;
             this.bkillsteam.Click += new System.EventHandler(this.bkillsteam_Click);
             // 
+            // Steamnoclient
+            // 
+            this.Steamnoclient.Location = new System.Drawing.Point(129, 26);
+            this.Steamnoclient.Name = "Steamnoclient";
+            this.Steamnoclient.Size = new System.Drawing.Size(79, 23);
+            this.Steamnoclient.TabIndex = 21;
+            this.Steamnoclient.Text = "Open steam";
+            this.Steamnoclient.UseVisualStyleBackColor = true;
+            this.Steamnoclient.Click += new System.EventHandler(this.Steamnoclient_Click);
+            // 
             // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(359, 298);
+            this.ClientSize = new System.Drawing.Size(361, 285);
+            this.Controls.Add(this.Steamnoclient);
             this.Controls.Add(this.bkillsteam);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -314,6 +326,7 @@ namespace Client_Launch_using_steam
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bkillsteam;
+        private System.Windows.Forms.Button Steamnoclient;
     }
 }
 

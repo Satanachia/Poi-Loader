@@ -212,6 +212,19 @@ namespace Client_Launch_using_steam
         {
             killsteam();
         }
+
+        private void Steamnoclient_Click(object sender, EventArgs e)
+        {
+            {
+                string path = lPath[comboBox1.SelectedIndex];
+                string user = lUser[comboBox1.SelectedIndex];
+                string pass = lPass[comboBox1.SelectedIndex];
+                Process test = new Process();
+                test.StartInfo.FileName = path;
+                test.StartInfo.Arguments = @"-login " + user + @" " + pass;
+                test.Start();
+            }
+        }
     }
 }
 
