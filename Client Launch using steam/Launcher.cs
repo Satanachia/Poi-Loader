@@ -20,6 +20,8 @@ namespace Client_Launch_using_steam
         public Launcher()
         {
             InitializeComponent();
+            textBox2.PasswordChar = '■';
+            textBox2.MaxLength = 14;
         }
 
         List<string> lProfile = new List<string>();
