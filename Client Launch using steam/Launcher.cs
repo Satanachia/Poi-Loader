@@ -172,7 +172,7 @@ namespace Client_Launch_using_steam
             else
             {
                 string path = Profiles[comboBox1.SelectedIndex].SteamPath;
-                string user = Profiles[comboBox1.SelectedIndex].password;
+                string user = Profiles[comboBox1.SelectedIndex].userName;
                 string pass = Profiles[comboBox1.SelectedIndex].password;
                 
 
@@ -180,7 +180,7 @@ namespace Client_Launch_using_steam
                 for (int i = 1; i <= Decimal.ToInt32(nofclient.Value -1); i++)
                 {
                     path = Profiles[comboBox1.SelectedIndex + i].SteamPath;
-                    user = Profiles[comboBox1.SelectedIndex + i].password;
+                    user = Profiles[comboBox1.SelectedIndex + i].userName;
                     pass = Profiles[comboBox1.SelectedIndex + i].password;
 
                     launch(user, pass, path, true);
@@ -222,7 +222,7 @@ namespace Client_Launch_using_steam
         {
             {
                 string path = Profiles[comboBox1.SelectedIndex].SteamPath;
-                string user = Profiles[comboBox1.SelectedIndex].password;
+                string user = Profiles[comboBox1.SelectedIndex].userName;
                 string pass = Profiles[comboBox1.SelectedIndex].password;
                 Process test = new Process();
                 test.StartInfo.FileName = path;
