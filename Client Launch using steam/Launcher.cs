@@ -39,7 +39,7 @@ namespace Client_Launch_using_steam
         private void blaunch_Click(object sender, EventArgs e)
         {
             string path = Profiles[comboBox1.SelectedIndex].SteamPath;
-            string user = Profiles[comboBox1.SelectedIndex].password;
+            string user = Profiles[comboBox1.SelectedIndex].userName;
             string pass = Profiles[comboBox1.SelectedIndex].password;
 
             launch(user, pass, path, checksteam.Checked) ;
