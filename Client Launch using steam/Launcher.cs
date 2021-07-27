@@ -21,24 +21,24 @@ namespace Client_Launch_using_steam
         {
             InitializeComponent();
         }
+        private static List<account> profiles = new List<account>();
 
-        List<string> lProfile = new List<string>();
-        List<string> lUser = new List<string>();
-        List<string> lPass = new List<string>();
-        List<string> lPath = new List<string>();
-        
+
+        internal static List<account> Profiles { get => profiles; set => profiles = value; }
 
         private void button2_Click(object sender, EventArgs e)
         {
             userinformation userinformation = new userinformation();
             userinformation.ShowDialog();
+            comboBox1.Items.Add(profiles[profiles.Count-1].profileName);
+
         }
 
         private void blaunch_Click(object sender, EventArgs e)
         {
-            string path = lPath[comboBox1.SelectedIndex];
-            string user = lUser[comboBox1.SelectedIndex];
-            string pass = lPass[comboBox1.SelectedIndex];
+            string path = Profiles[comboBox1.SelectedIndex].SteamPath;
+            string user = Profiles[comboBox1.SelectedIndex].password;
+            string pass = Profiles[comboBox1.SelectedIndex].password;
 
             launch(user, pass, path, checksteam.Checked) ;
 
@@ -112,9 +112,11 @@ namespace Client_Launch_using_steam
                 MessageBox.Show(ex.Message);
             }
         }
-        private void Form1_Load(object sender, EventArgs e)
+        private void loadprofiles()
         {
+            
             bool fileexist = File.Exists(@"profile.csv");
+            
             if (!fileexist)
             {
                 using (var file = File.Create(@"profile.csv"))
@@ -133,28 +135,29 @@ namespace Client_Launch_using_steam
                 {
                     var line = reader.ReadLine();
                     var values = line.Split(',');
-
-                    lProfile.Add(values[0]);
-                    lUser.Add(values[1]);
-                    lPass.Add(values[2]);
-                    lPath.Add(values[3]);
+                    Profiles.Add(new account(values[0], values[1], values[2], values[3]));
                 }
 
-                for (int i = 0; i <= lProfile.Count - 1; i++)
+                for (int i = 0; i <= Profiles.Count - 1; i++)
                 {
-                    comboBox1.Items.Add(lProfile[i]);
+
+                    comboBox1.Items.Add(Profiles[i].profileName);
                 }
             }
 
             comboBox1.SelectedIndex = 0;
-           
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            loadprofiles();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBox1.Text = lUser[comboBox1.SelectedIndex];
-            textBox2.Text = lPass[comboBox1.SelectedIndex];
-            textBox3.Text = lPath[comboBox1.SelectedIndex];
+            textBox1.Text = Profiles[comboBox1.SelectedIndex].userName;
+            textBox2.Text = Profiles[comboBox1.SelectedIndex].password;
+            textBox3.Text = Profiles[comboBox1.SelectedIndex].SteamPath;
         }
 
         private void launchxclients_Click(object sender, EventArgs e)
@@ -166,18 +169,18 @@ namespace Client_Launch_using_steam
             }
             else
             {
-                string path = lPath[comboBox1.SelectedIndex];
-                string user = lUser[comboBox1.SelectedIndex];
-                string pass = lPass[comboBox1.SelectedIndex];
+                string path = Profiles[comboBox1.SelectedIndex].SteamPath;
+                string user = Profiles[comboBox1.SelectedIndex].password;
+                string pass = Profiles[comboBox1.SelectedIndex].password;
                 
 
                 launch(user, pass, path, true);
                 for (int i = 1; i <= Decimal.ToInt32(nofclient.Value -1); i++)
                 {
-                    path = lPath[comboBox1.SelectedIndex + i];
-                    user = lUser[comboBox1.SelectedIndex + i];
-                    pass = lPass[comboBox1.SelectedIndex + i];
-                    
+                    path = Profiles[comboBox1.SelectedIndex + i].SteamPath;
+                    user = Profiles[comboBox1.SelectedIndex + i].password;
+                    pass = Profiles[comboBox1.SelectedIndex + i].password;
+
                     launch(user, pass, path, true);
                 }
 
@@ -216,9 +219,9 @@ namespace Client_Launch_using_steam
         private void Steamnoclient_Click(object sender, EventArgs e)
         {
             {
-                string path = lPath[comboBox1.SelectedIndex];
-                string user = lUser[comboBox1.SelectedIndex];
-                string pass = lPass[comboBox1.SelectedIndex];
+                string path = Profiles[comboBox1.SelectedIndex].SteamPath;
+                string user = Profiles[comboBox1.SelectedIndex].password;
+                string pass = Profiles[comboBox1.SelectedIndex].password;
                 Process test = new Process();
                 test.StartInfo.FileName = path;
                 test.StartInfo.Arguments = @"-login " + user + @" " + pass;

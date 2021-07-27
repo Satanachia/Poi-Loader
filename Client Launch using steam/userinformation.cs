@@ -69,20 +69,16 @@ namespace Client_Launch_using_steam
             {
                 var filePath = @"profile.csv";
                 var csv = new StringBuilder();
-
-                var profile = tprofile.Text;
-                var user = tuser.Text;
-                var pass = tpass.Text;
-                var path = tpath.Text;
-
+                account newAccoutn = new account(tprofile.Text, tuser.Text, tpass.Text, tpath.Text) ;
+                Launcher.Profiles.Add(newAccoutn);
+                
 
 
 
                 //Suggestion made by KyleMit
-                var newLine = string.Format("{0},{1},{2},{3}", profile, user, pass, path);
+                var newLine = string.Format("{0},{1},{2},{3}", newAccoutn.profileName, newAccoutn.userName, newAccoutn.password, newAccoutn.SteamPath);
                 csv.AppendLine(newLine);
                 File.AppendAllText(filePath, csv.ToString());
-                MessageBox.Show("saved to file,\r\nyou will need to reopen the program for the list to update :c");
                 this.Close();
             }
             else
