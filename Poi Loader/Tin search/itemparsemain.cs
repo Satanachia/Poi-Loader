@@ -23,7 +23,6 @@ namespace poiLoader
         List<Character> mychars = new List<Character>();
         string path = "";
         bool onlyclearonce = false;
-        bool expanded = false;
         string localpath = "";
 
 
@@ -38,7 +37,7 @@ namespace poiLoader
         private void ItemParseMain_Load(object sender, EventArgs e)
         {
             
-            expanded = false;
+            
             localpath = Directory.GetCurrentDirectory();
             localpath += @"\config.txt";
 

@@ -34,10 +34,8 @@ namespace poiLoader
             this.blaunch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.checksteam = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,7 +75,7 @@ namespace poiLoader
             this.blaunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.blaunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blaunch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.blaunch.Location = new System.Drawing.Point(14, 301);
+            this.blaunch.Location = new System.Drawing.Point(14, 254);
             this.blaunch.Name = "blaunch";
             this.blaunch.Size = new System.Drawing.Size(78, 24);
             this.blaunch.TabIndex = 6;
@@ -89,6 +87,7 @@ namespace poiLoader
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(11, 13);
             this.textBox1.Multiline = true;
@@ -101,6 +100,7 @@ namespace poiLoader
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Location = new System.Drawing.Point(11, 53);
             this.textBox2.Multiline = true;
@@ -109,24 +109,13 @@ namespace poiLoader
             this.textBox2.TabIndex = 9;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(11, 93);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(172, 25);
-            this.textBox3.TabIndex = 10;
-            // 
             // checksteam
             // 
             this.checksteam.AutoSize = true;
             this.checksteam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checksteam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checksteam.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checksteam.Location = new System.Drawing.Point(14, 262);
+            this.checksteam.Location = new System.Drawing.Point(14, 220);
             this.checksteam.Name = "checksteam";
             this.checksteam.Size = new System.Drawing.Size(127, 20);
             this.checksteam.TabIndex = 16;
@@ -138,22 +127,11 @@ namespace poiLoader
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(195, 264);
+            this.label5.Location = new System.Drawing.Point(195, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "seconds";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(186, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 25);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Path";
             // 
             // label2
             // 
@@ -182,7 +160,7 @@ namespace poiLoader
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(25, 9);
+            this.label4.Location = new System.Drawing.Point(12, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 25);
             this.label4.TabIndex = 12;
@@ -195,7 +173,7 @@ namespace poiLoader
             this.launchxclients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.launchxclients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.launchxclients.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.launchxclients.Location = new System.Drawing.Point(98, 301);
+            this.launchxclients.Location = new System.Drawing.Point(98, 254);
             this.launchxclients.Name = "launchxclients";
             this.launchxclients.Size = new System.Drawing.Size(78, 24);
             this.launchxclients.TabIndex = 13;
@@ -210,7 +188,7 @@ namespace poiLoader
             this.bkill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bkill.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bkill.Location = new System.Drawing.Point(14, 331);
+            this.bkill.Location = new System.Drawing.Point(14, 284);
             this.bkill.Name = "bkill";
             this.bkill.Size = new System.Drawing.Size(78, 24);
             this.bkill.TabIndex = 15;
@@ -224,7 +202,7 @@ namespace poiLoader
             this.tpid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tpid.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tpid.Location = new System.Drawing.Point(14, 361);
+            this.tpid.Location = new System.Drawing.Point(14, 314);
             this.tpid.Multiline = true;
             this.tpid.Name = "tpid";
             this.tpid.Size = new System.Drawing.Size(246, 25);
@@ -235,7 +213,7 @@ namespace poiLoader
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(98, 336);
+            this.label6.Location = new System.Drawing.Point(98, 289);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 16);
             this.label6.TabIndex = 18;
@@ -246,7 +224,7 @@ namespace poiLoader
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(11, 389);
+            this.label7.Location = new System.Drawing.Point(11, 342);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(257, 15);
             this.label7.TabIndex = 19;
@@ -289,11 +267,12 @@ namespace poiLoader
             this.mbaccountlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.mbaccountlist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mbaccountlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mbaccountlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mbaccountlist.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.mbaccountlist.FormattingEnabled = true;
-            this.mbaccountlist.Location = new System.Drawing.Point(14, 39);
+            this.mbaccountlist.Location = new System.Drawing.Point(14, 32);
             this.mbaccountlist.Name = "mbaccountlist";
-            this.mbaccountlist.Size = new System.Drawing.Size(246, 21);
+            this.mbaccountlist.Size = new System.Drawing.Size(246, 28);
             this.mbaccountlist.TabIndex = 25;
             this.mbaccountlist.SelectedIndexChanged += new System.EventHandler(this.mbaccountlist_SelectedIndexChanged);
             // 
@@ -302,24 +281,22 @@ namespace poiLoader
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(14, 121);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(254, 135);
+            this.panel3.Size = new System.Drawing.Size(254, 91);
             this.panel3.TabIndex = 26;
             // 
             // ttime
             // 
             this.ttime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.ttime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ttime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.ttime.Location = new System.Drawing.Point(147, 265);
+            this.ttime.Location = new System.Drawing.Point(147, 221);
             this.ttime.Name = "ttime";
-            this.ttime.Size = new System.Drawing.Size(42, 17);
+            this.ttime.Size = new System.Drawing.Size(42, 19);
             this.ttime.TabIndex = 14;
             this.ttime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -327,11 +304,11 @@ namespace poiLoader
             // 
             this.tlauncnum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.tlauncnum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tlauncnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.tlauncnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tlauncnum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tlauncnum.Location = new System.Drawing.Point(182, 301);
+            this.tlauncnum.Location = new System.Drawing.Point(182, 255);
             this.tlauncnum.Name = "tlauncnum";
-            this.tlauncnum.Size = new System.Drawing.Size(44, 24);
+            this.tlauncnum.Size = new System.Drawing.Size(44, 19);
             this.tlauncnum.TabIndex = 27;
             this.tlauncnum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -341,7 +318,7 @@ namespace poiLoader
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(280, 417);
+            this.ClientSize = new System.Drawing.Size(280, 369);
             this.Controls.Add(this.tlauncnum);
             this.Controls.Add(this.ttime);
             this.Controls.Add(this.checksteam);
@@ -378,8 +355,6 @@ namespace poiLoader
         private System.Windows.Forms.Button blaunch;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

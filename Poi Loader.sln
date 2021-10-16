@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poi Loader", "Client Launch using steam\Poi Loader.csproj", "{8D5EC4D9-4C2B-4ABF-B0F4-5CC70FA93A47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poi Loader", "Poi Loader\Poi Loader.csproj", "{8D5EC4D9-4C2B-4ABF-B0F4-5CC70FA93A47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {478F2D3B-ACDE-4CB3-99A2-3171E3EB1071}
+		SolutionGuid = {25E35966-2019-43DC-A637-30C301D24102}
 	EndGlobalSection
 EndGlobal

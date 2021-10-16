@@ -7,14 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace poiLoader
 {
     public partial class home : Form
     {
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
+
+
+
+
+
+
+
+
+
+
+
         public home()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
         Launcher launch = new Launcher() { TopLevel = false, TopMost = true };
         ItemParseMain search = new ItemParseMain()  { TopLevel = false, TopMost = true };
@@ -45,7 +70,7 @@ namespace poiLoader
             }
             else
             {
-                Size = new Size(470, 417);
+                Size = new Size(480, 369);
                 hideall();
                 phold.Controls.Clear();
                 phold.Controls.Add(launch);
@@ -61,7 +86,7 @@ namespace poiLoader
             }
             else
             {
-                Size = new Size(894, 695);
+                Size = new Size(904, 695);
                 hideall();
                 phold.Controls.Clear();
                 phold.Controls.Add(search);

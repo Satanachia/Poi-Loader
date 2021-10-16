@@ -154,6 +154,8 @@ namespace poiLoader
         private void Form1_Load(object sender, EventArgs e)
         {
             ttime.Text = "30";
+            tlauncnum.Text = "0";
+
             loadprofiles();
         }
 
@@ -267,7 +269,7 @@ namespace poiLoader
         {
             textBox1.Text = Profiles[mbaccountlist.SelectedIndex].userName;
             textBox2.Text = Profiles[mbaccountlist.SelectedIndex].password;
-            textBox3.Text = Profiles[mbaccountlist.SelectedIndex].SteamPath;
+            
 
         }
     }
