@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Client_Launch_using_steam
+namespace poiLoader
 {
     public partial class userinformation : Form
     {

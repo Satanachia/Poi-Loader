@@ -1,5 +1,5 @@
 ﻿
-namespace Client_Launch_using_steam
+namespace poiLoader
 {
     partial class userinformation
     {

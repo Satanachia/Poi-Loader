@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client_Launch_using_steam
+namespace poiLoader
 {
     class account
     {

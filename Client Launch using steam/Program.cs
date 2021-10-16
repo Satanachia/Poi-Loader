@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Client_Launch_using_steam
+namespace poiLoader
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Client_Launch_using_steam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Launcher());
+            Application.Run(new home());
         }
     }
 }

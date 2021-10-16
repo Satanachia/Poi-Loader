@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using System.Management;
 
 
-namespace Client_Launch_using_steam
+namespace poiLoader
 {
     public partial class Launcher : Form
     {
@@ -28,19 +28,22 @@ namespace Client_Launch_using_steam
 
         internal static List<account> Profiles { get => profiles; set => profiles = value; }
 
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             userinformation userinformation = new userinformation();
             userinformation.ShowDialog();
-            comboBox1.Items.Add(profiles[profiles.Count-1].profileName);
+            mbaccountlist.Items.Add(profiles[profiles.Count-1].profileName);
 
         }
 
         private void blaunch_Click(object sender, EventArgs e)
         {
-            string path = Profiles[comboBox1.SelectedIndex].SteamPath;
-            string user = Profiles[comboBox1.SelectedIndex].userName;
-            string pass = Profiles[comboBox1.SelectedIndex].password;
+            string path = Profiles[mbaccountlist.SelectedIndex].SteamPath;
+            string user = Profiles[mbaccountlist.SelectedIndex].userName;
+            string pass = Profiles[mbaccountlist.SelectedIndex].password;
 
             launch(user, pass, path, checksteam.Checked) ;
 
@@ -58,7 +61,8 @@ namespace Client_Launch_using_steam
                 //when new pid gets added then close steam to remove need for wait
                 if(closesteam)
                 {
-                    Thread.Sleep(Decimal.ToInt32(ntimetoclose.Value) * 1000);
+                    int time = int.Parse(ttime.Text);
+                    Thread.Sleep(time * 1000);
                     killsteam();
                 }
             }
@@ -142,46 +146,40 @@ namespace Client_Launch_using_steam
 
                 for (int i = 0; i <= Profiles.Count - 1; i++)
                 {
-
-                    comboBox1.Items.Add(Profiles[i].profileName);
+                    mbaccountlist.Items.Add(Profiles[i].profileName);
                 }
             }
-
-            comboBox1.SelectedIndex = 0;
+            mbaccountlist.SelectedIndex = 0;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ttime.Text = "30";
             loadprofiles();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            textBox1.Text = Profiles[comboBox1.SelectedIndex].userName;
-            textBox2.Text = Profiles[comboBox1.SelectedIndex].password;
-            textBox3.Text = Profiles[comboBox1.SelectedIndex].SteamPath;
-        }
+
 
         private void launchxclients_Click(object sender, EventArgs e)
         {
-            int launcnum = Decimal.ToInt32(nofclient.Value);
-            if (Decimal.ToInt32(nofclient.Value) <= 0 || Decimal.ToInt32(nofclient.Value) <= 1)
+
+            int launcnum = int.Parse(tlauncnum.Text);
+            if (launcnum <= 0 || launcnum <= 1)
             {
                 MessageBox.Show("please pick 2 or more");
             }
             else
             {
-                string path = Profiles[comboBox1.SelectedIndex].SteamPath;
-                string user = Profiles[comboBox1.SelectedIndex].userName;
-                string pass = Profiles[comboBox1.SelectedIndex].password;
+                string path = Profiles[mbaccountlist.SelectedIndex].SteamPath;
+                string user = Profiles[mbaccountlist.SelectedIndex].userName;
+                string pass = Profiles[mbaccountlist.SelectedIndex].password;
                 
 
                 launch(user, pass, path, true);
-                for (int i = 1; i <= Decimal.ToInt32(nofclient.Value -1); i++)
+                for (int i = 1; i <= launcnum -1 ; i++)
                 {
-                    path = Profiles[comboBox1.SelectedIndex + i].SteamPath;
-                    user = Profiles[comboBox1.SelectedIndex + i].userName;
-                    pass = Profiles[comboBox1.SelectedIndex + i].password;
+                    path = Profiles[mbaccountlist.SelectedIndex + i].SteamPath;
+                    user = Profiles[mbaccountlist.SelectedIndex + i].userName;
+                    pass = Profiles[mbaccountlist.SelectedIndex + i].password;
 
                     launch(user, pass, path, true);
                 }
@@ -221,14 +219,56 @@ namespace Client_Launch_using_steam
         private void Steamnoclient_Click(object sender, EventArgs e)
         {
             {
-                string path = Profiles[comboBox1.SelectedIndex].SteamPath;
-                string user = Profiles[comboBox1.SelectedIndex].userName;
-                string pass = Profiles[comboBox1.SelectedIndex].password;
+                string path = Profiles[mbaccountlist.SelectedIndex].SteamPath;
+                string user = Profiles[mbaccountlist.SelectedIndex].userName;
+                string pass = Profiles[mbaccountlist.SelectedIndex].password;
                 Process test = new Process();
                 test.StartInfo.FileName = path;
                 test.StartInfo.Arguments = @"-login " + user + @" " + pass;
                 test.Start();
             }
+        }
+
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ItemParseMain itemsearch = new ItemParseMain();
+            itemsearch.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mbaccountlist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = Profiles[mbaccountlist.SelectedIndex].userName;
+            textBox2.Text = Profiles[mbaccountlist.SelectedIndex].password;
+            textBox3.Text = Profiles[mbaccountlist.SelectedIndex].SteamPath;
+
         }
     }
 }
