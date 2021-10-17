@@ -18,7 +18,7 @@ saddly if you want to update the list of accounts you will need to reopen the pr
 
 
 ## main screen
-![Preview](mainscreen.png)
+![Preview](Mainscreennew.png)
 
 ## how to
 * at the top you select what profile you want to use as profile 1 (this comes into play later)
@@ -32,7 +32,7 @@ saddly if you want to update the list of accounts you will need to reopen the pr
 say i selected profile aaa and in my list of profiles was bbb and ccc as shown here
 
 
-![Preview](more.png)
+![Preview](morenew.png)
 
 if i select 2 and then click launch x clients it will launch the selected profile (aaa) and then the profile after (bbb) 
 if i select 3 it will launch both aaa and the 2 cleints after it (bbb) and (ccc)
@@ -42,8 +42,32 @@ if you click kill all clients it will kill all clients.
 if you put the name of the main cleint into the text box next to kill all clients your main client will not be closed. 
 for this to work you need some kind of way of renaming clients. see tin or some other program
 
+
+## Item search
+For the item search to work you need to have tin installed, this can be found at [rotar.tk/tin/](https://rotar.tk/tin/) . you will need to inject this your self. you can use [abyss](https://blade3575.com/Abyss/), [kanan loader](https://github.com/cursey/kanan-new) or [lazy loader](https://cedricodin.blogspot.com/2019/08/lpe-v350.html) to do this. Once tin is installed and your using up to date mod folder (I have included this in the release, this is uptodate as of 10/17/2021) make sure you open tin.user.ini and set LogItems to 1 (LogItems=1). this will create a folder called "saved items" inside your mabinogi install. 
+
+at this point to use to search you click on search on the sidebar of poi loader. If you have not selected you mabi install it will ask you to. 
+![Preview](search.png)
+
+click on select path and navigate to your mabinogi install. 
+normally this is at:
+steam: C:\Program Files (x86)\Steam\steamapps\common\Mabinogi
+nexon launcher: C:\Nexon\Library\mabinogi\appdata
+(note you want to select the root folder of mabi, not the saved items folder. the root folder is the folder where client.exe is)
+
+you can then select ether search by name or search by reforge, type in your search term and click search.
+a result like below will be given
+(note i changed the names in this search to ### for "reasons")
+![Preview](searchresault.png)
+
+if you search by reforge it will look mostly the same but will also print out the reforges of that item.
+
+<sub><sup>last updated for verson 2.0 on  10/17/2021</sup></sub>
+<sub><sup>maybe i'll add more to this app later as i learn</sup></sub>
+
 ## Credits
 * that guy who showed me you can launch mabi via steam with command line
+* KaNeoRotar for creating tin to allow the search to work
 
 ## copyright stuff (i dont even know if this is legit)
 
