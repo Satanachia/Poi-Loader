@@ -34,10 +34,11 @@ namespace poiLoader
             this.blaunch = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bclose = new System.Windows.Forms.Button();
             this.phold = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bminimize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -96,20 +97,20 @@ namespace poiLoader
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // bclose
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(169, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 25);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.bclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bclose.FlatAppearance.BorderSize = 0;
+            this.bclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bclose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bclose.Location = new System.Drawing.Point(169, 10);
+            this.bclose.Name = "bclose";
+            this.bclose.Size = new System.Drawing.Size(25, 25);
+            this.bclose.TabIndex = 10;
+            this.bclose.Text = "X";
+            this.bclose.UseVisualStyleBackColor = false;
+            this.bclose.Click += new System.EventHandler(this.button2_Click);
             // 
             // phold
             // 
@@ -139,6 +140,21 @@ namespace poiLoader
             this.panel2.Size = new System.Drawing.Size(153, 50);
             this.panel2.TabIndex = 21;
             // 
+            // bminimize
+            // 
+            this.bminimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.bminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bminimize.FlatAppearance.BorderSize = 0;
+            this.bminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bminimize.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bminimize.Location = new System.Drawing.Point(169, 41);
+            this.bminimize.Name = "bminimize";
+            this.bminimize.Size = new System.Drawing.Size(25, 25);
+            this.bminimize.TabIndex = 22;
+            this.bminimize.Text = "_";
+            this.bminimize.UseVisualStyleBackColor = false;
+            this.bminimize.Click += new System.EventHandler(this.bminimize_Click);
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,14 +162,16 @@ namespace poiLoader
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(992, 1108);
+            this.Controls.Add(this.bminimize);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.phold);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bclose);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Poi Loader";
             this.Load += new System.EventHandler(this.home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -169,9 +187,10 @@ namespace poiLoader
         private System.Windows.Forms.Button blaunch;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bclose;
         private System.Windows.Forms.Panel phold;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button bminimize;
     }
 }

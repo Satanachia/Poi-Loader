@@ -124,5 +124,10 @@ namespace poiLoader
         {
             this.Close();
         }
+
+        private void bminimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
